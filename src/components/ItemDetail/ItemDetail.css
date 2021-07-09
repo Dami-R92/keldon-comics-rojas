@@ -1,0 +1,10 @@
+.detail {
+    color: snow;
+}
+
+.item-detail-escription {
+    padding: 15px;
+    text-align: justify;
+    justify-content: justify;
+    text-justify: newspaper;
+}
