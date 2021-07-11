@@ -3,17 +3,14 @@ import ItemList from '../ItemList/ItemList'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
-
 //CSS
 import './ItemListContainer.css'
 //SEMANTIC UI
 import { Grid } from 'semantic-ui-react'
 
 
-
 const ItemListContainer = () => {
     const { categoryName } = useParams();
-    console.log('categoryName', categoryName);
 
     const [items, setItems] = useState([]);
 

@@ -42,10 +42,8 @@ export default class NavBar extends Component {
                     active={activeItem === 'carrito'}
                     onClick={this.handleItemClick}>
                     <div>
-                        <Icon name='shopping cart' />
+                        <Link className='Link' to='/cart' > <Icon name='shopping cart' /> Carrito</Link>
                     </div>
-
-                    Carrito
                 </Menu.Item>
             </Menu>
         )
