@@ -1,9 +1,26 @@
 .detail {
-    color: snow;
+    color:rgb(17, 16, 16);
+    background-color: white;
+    border-radius: 25px;
+    margin: 10px !important;
+    
+
 }
 
+.detail h1 {
+    color:rgb(17, 16, 16);
+}
+.cover-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle ;
+
+}
+
+
 .item-detail-escription {
-    padding: 15px;
+    padding: 5px;
     text-align: justify;
     justify-content: justify;
     text-justify: newspaper;

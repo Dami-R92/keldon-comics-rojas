@@ -12,8 +12,13 @@ export const CartProvider = ({ children }) => {
 
     const clearCart = () => setCart([]);
 
+    const purchaseEnd = () => {
+        setCart([]);
+        alert('Muchas gracias por tu compra!')
+    }
+
     //Si esta en acrrito devuelve true si no esta devuelve False.
-    const isInCart = id => cart.some(item => item.id === id)
+    let isInCart = id => cart.some(item => item.id === id)
 
 
 
@@ -31,11 +36,7 @@ export const CartProvider = ({ children }) => {
         }
     };
 
-    const realStock = (item, comics) => {
-        return (item.stock - item.quantity)
-    }
-
-    return <CartContext.Provider value={{ cart, setCart, clearCart, addToCart, realStock }}>
+    return <CartContext.Provider value={{ cart, setCart, clearCart, addToCart, isInCart, purchaseEnd }}>
         {children}
     </CartContext.Provider>
 
