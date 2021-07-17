@@ -1,0 +1,19 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCl77h-IheC15KhWzqVCdSwnzQ3IqfDVZY",
+    authDomain: "keldon-comics-rojas.firebaseapp.com",
+    projectId: "keldon-comics-rojas",
+    storageBucket: "keldon-comics-rojas.appspot.com",
+    messagingSenderId: "393151327597",
+    appId: "1:393151327597:web:8568b82ceeccfef15d3e64"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>

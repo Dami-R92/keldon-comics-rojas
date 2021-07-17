@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList'
-import axios from 'axios';
 import { useParams } from 'react-router-dom';
+
+//FIREBASE
+import { itemsCollection } from '../../firebase';
 
 //CSS
 import './ItemListContainer.css'
@@ -15,13 +17,13 @@ const ItemListContainer = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        (async () => {
-            const { data } = await axios.get(`https://60d7a31d307c300017a5f92c.mockapi.io/keldon`);
-            if (!categoryName) return setItems(data);
-            const catItems= data.filter(items=>items.category ===categoryName);
-            setItems(catItems);
-        })();
 
+        (async()=> {
+            let collection= itemsCollection;
+            if (categoryName) collection = itemsCollection.where('category', '==', categoryName);
+            const response = await collection.get();
+            setItems(response.docs.map(item=> ({id: item.id, ...item.data()})))
+        })();
     }, [categoryName]);
 
 

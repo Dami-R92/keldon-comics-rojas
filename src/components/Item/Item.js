@@ -17,8 +17,8 @@ export default function Item({ item }) {
                 <Card.Header>{item.name}</Card.Header>
                 <br />
                 {!item.stock ? <Label className='agotado' as='a' color='red' tag> Agotado </Label> : ""}
+                <p className='quote'>{item.quote}</p>
             </Card.Content>
-
         </Card>
     );
 };

@@ -10,5 +10,12 @@
 
 .agotado {
   width: 50%;
+}
 
+.quote {
+  color: black;
+  font-weight: 400;
+  padding: 5%;
+  text-align: justify;
+  
 }

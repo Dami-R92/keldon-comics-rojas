@@ -1,0 +1,12 @@
+.cartWidget {
+    display: flex;
+    align-items: center;
+    width: 100% !important;
+}
+
+.cartWidget--img {
+    height: 30px;
+}
+.cartWidget--strong {
+    font-size: 15px;
+}

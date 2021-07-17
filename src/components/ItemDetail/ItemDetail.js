@@ -7,10 +7,10 @@ import './ItemDetail.css'
 
 export default function ItemDetail({ comics }) {
 
-    const { addToCart } = useCartContext();
-
-
+    const { addToCart, realStock } = useCartContext();
     const addOn = qty => addToCart(comics, qty);
+    const stock = realStock(comics);
+
 
     return (
 
@@ -22,8 +22,8 @@ export default function ItemDetail({ comics }) {
                 <Grid.Column className='header-detail'>
                     <h1>{comics.name}</h1>
                     <h2>$ {comics.amount}</h2>
-                    <h4>Stock: {comics.stock}</h4>
-                    <ItemCount stock={comics.stock} addOn={addOn} id={comics.id} />
+                    <h4>Stock: {stock}</h4>
+                    <ItemCount stock={stock} addOn={addOn} id={comics.id} />
                 </Grid.Column>
             </Grid.Row>
             <Grid.Row columns={1} >

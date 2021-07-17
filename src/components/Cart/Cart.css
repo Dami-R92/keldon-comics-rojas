@@ -1,4 +1,6 @@
 .cart-container {
+    background-color: rgba(34, 34, 34, 0.596);
+    border-radius: 10px;
     width: 100%;
     color: white;
     align-items: center;

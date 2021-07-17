@@ -1,19 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import './ItemDetailContainer.css';
-import axios from 'axios';
+
+import { useParams } from 'react-router-dom';
 
 //COMPONENT
 import ItemDetail from '../../components/ItemDetail/ItemDetail.js';
+import { itemsCollection } from '../../firebase';
 
-function ItemDetailContainer({ match }) {
-	let comicID = match.params.id;
+function ItemDetailContainer() {
+
+	const { id } = useParams();
+
 	const [comics, setComics] = useState([]);
 
+
+
 	useEffect(() => {
-		axios(`https://60d7a31d307c300017a5f92c.mockapi.io/keldon/${comicID}`).then((comic) =>
-			setComics(comic.data)
-		);
-	}, [comicID]);
+		(async () => {
+			const response = await itemsCollection.doc(id).get();
+			setComics({id:response.id, ...response.data()});
+		})();
+	}, [id]);
 
 	return (
 		<div>

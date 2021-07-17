@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
-import { Menu, Icon } from 'semantic-ui-react'
+import { Menu } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 
+import CartWidget from '../CartWidget/CartWidget';
+
+//CONTEXT
+
 export default class NavBar extends Component {
+
     state = {}
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
@@ -35,15 +40,19 @@ export default class NavBar extends Component {
                 >
                     <Link className='Link' to='/category/comic'> Comic </Link>
                 </Menu.Item>
-
-
                 <Menu.Item
                     name='carrito'
                     active={activeItem === 'carrito'}
                     onClick={this.handleItemClick}>
-                    <div>
-                        <Link className='Link' to='/cart' > <Icon name='shopping cart' /> Carrito</Link>
-                    </div>
+                    <Link className='Link' to='/cart' > Tu Carrito </Link>
+
+                </Menu.Item>
+                <Menu.Item
+                    name='carrito'
+                    active={activeItem === 'carrito'}
+                    onClick={this.handleItemClick}>
+                    <Link className='Link' to='/cart' > <CartWidget /> </Link>
+
                 </Menu.Item>
             </Menu>
         )
