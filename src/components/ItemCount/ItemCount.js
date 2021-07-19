@@ -28,7 +28,7 @@ export default function ItemCount({ stock, addOn, id }) {
     return (
 
         <div className='contador'>
-            {!stock ? <Label className='agotado' as='a' color='red' tag> Agotado </Label> : ""}
+            {stock ? "":  <Label className='agotado' as='a' color='red' tag> Agotado </Label> }
             <Grid.Row columns={3} >
 
                 {stock > 0 ? <Button size='small' className='btn-count' color="blue" onClick={handleIncrement}> + </Button> : <Button className='btn-count' size='small' color="grey"> + </Button>}

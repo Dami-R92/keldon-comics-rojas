@@ -29,7 +29,7 @@ const ItemListContainer = () => {
 
     return (
         <div className='item-container'>
-            <Grid columns={3} stackable>
+            <Grid  stackable>
                 <ItemList items={items} />
             </Grid>
         </div>

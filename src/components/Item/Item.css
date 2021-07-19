@@ -1,7 +1,7 @@
 .card {
   width: 225px !important;
   height: 300px;
-  margin: 15px !important;
+  margin: 10px !important;
 }
 
 .cover {
@@ -18,4 +18,9 @@
   padding: 5%;
   text-align: justify;
   
+}
+.card-amount  {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: black !important;
 }
