@@ -2,15 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 //SEMANTIC UI
 import { Button } from 'semantic-ui-react'
-
 //CONTEXT
-import { useCartContext } from '../../context/CartContext'
-
+import { useCartContext } from '../../context/CartContext';
 //CSS
 import './Cart.css'
+//Componentes
+import PurchaseOrder from '../PurchaseOrder/PurchaseOrder';
 
 const Cart = () => {
-  const { cart, clearCart, purchaseEnd, removeItem, totalCart } = useCartContext();
+
+  const { cart, clearCart, removeItem, totalCart, datos, confirmData} = useCartContext();
 
   if (!cart.length) return (
     <div>
@@ -57,12 +58,13 @@ const Cart = () => {
           </tr>
         </tbody>
       </table>
-
-
-      <Button className='btn' onClick={clearCart} size='big' color='blue' >Vaciar Carrito</Button>
-      <Button className='btn' onClick={purchaseEnd} size='big' color='green'>Finalizar Compra</Button>
+      {datos? <PurchaseOrder /> :
+        <div>
+          <Button className='btn' onClick={clearCart} size='big' color='blue' >Vaciar Carrito</Button>
+          <Button className='btn' onClick={confirmData} size='big' color='green'>Confirmar Datos</Button>
+        </div>}
     </div>
   )
 }
 
-export default Cart
+export default Cart;

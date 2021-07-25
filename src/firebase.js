@@ -14,3 +14,4 @@ const firebaseConfig = {
 const app = !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();;
 
 export const itemsCollection = firebase.firestore(app).collection('products')
+export const usersCollection = firebase.firestore(app).collection('users')
