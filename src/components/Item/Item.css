@@ -1,7 +1,15 @@
 .card {
   width: 225px !important;
   height: 300px;
-  margin: 10px !important;
+  margin: 7px !important;
+  background: rgba(255, 255, 255, 0.548) !important;
+  box-shadow: 4px 3px 3px rgba(0, 0, 0, 0.30) !important;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: white !important;
+  box-shadow: 3px 3px 3px 3px rgba(255, 255, 255, 0.30) !important;
 }
 
 .cover {
