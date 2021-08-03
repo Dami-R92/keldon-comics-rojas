@@ -22,7 +22,7 @@ export default function ItemDetail({ comics }) {
                 <Grid.Column className='header-detail'>
                     <h1>{comics.name}</h1>
                     <h2>$ {comics.amount}</h2>
-                    <h4>Stock: {stock}</h4>
+                    <label>Stock: {stock}</label>
                     <ItemCount stock={stock} addOn={addOn} id={comics.id} />
                 </Grid.Column>
             </Grid.Row>

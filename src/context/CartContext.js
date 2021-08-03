@@ -17,7 +17,7 @@ export const CartProvider = ({ children }) => {
     const [datosUser,setDatosUser] = useState("")
 
     const confirmData = () => {
-        setDatos(!datos)
+        setDatos(true)
     }
     const confirmBuyer = () => {
         setDatosUser(!datosUser)
@@ -25,6 +25,7 @@ export const CartProvider = ({ children }) => {
     
     const purchaseEnd = () => {
         setCart([]);
+        setDatos(false)
         alert('Muchas gracias por tu compra!')
     }
 

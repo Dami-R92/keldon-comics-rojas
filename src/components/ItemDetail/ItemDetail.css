@@ -1,15 +1,39 @@
 .detail {
     color:rgb(17, 16, 16);
-    background-color: white;
     border-radius: 25px;
     margin: 10px !important;
+    background: rgba(255, 255, 255, 0.548) !important;
+    box-shadow: 4px 3px 3px rgba(0, 0, 0, 0.30) !important;
+    font-family: 'Roboto', sans-serif;
     
 
 }
 
 .detail h1 {
-    color:rgb(17, 16, 16);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-shadow: 1px 2px 2px rgb(39, 39, 39);
 }
+.detail h2 {
+    font-weight: 600;
+    margin: 7px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    padding: 3px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+.detail label {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px;
+    background-color: teal;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 1px black;
+}
+
 .cover-detail {
     display: flex;
     align-items: center;
@@ -21,7 +45,11 @@
 
 .item-detail-escription {
     padding: 5px;
+    font-size: 15px;
     text-align: justify;
     justify-content: justify;
     text-justify: newspaper;
+    font-weight: 400;
+    color: white;
+    text-shadow: 1px 1px 1px black;
 }

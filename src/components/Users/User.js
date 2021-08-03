@@ -9,7 +9,7 @@ import { useCartContext } from '../../context/CartContext';
 
 
 const User = ({ addUsers }) => {
-    const { confirmBuyer } = useCartContext();
+    const { cart, confirmBuyer } = useCartContext();
 
     const initialState = {
         name: '',
@@ -32,6 +32,7 @@ const User = ({ addUsers }) => {
         setValues({ ...initialState }) //Resetear campos del Formualrio
     };
 
+    // console.log(cart.map((item)=> item));
 
     return (
         <div className='container'>

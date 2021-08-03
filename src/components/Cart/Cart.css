@@ -34,3 +34,21 @@ td {
     margin: 25px 50px 25px 50px !important;
     
 }
+
+.btn-remove {
+    margin: 0px 20px 0px 20px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-shadow: 1px 2px 2px rgb(39, 39, 39);
+    background: linear-gradient(to top,hsl(327, 57%, 60%),hsl(19, 100%, 60%));
+    width: 40px;
+    padding: 2px 5px 2px 5px;
+    direction: none;
+    border: none;
+    border-radius: 5px;
+}
+.btn-remove:hover {
+    transform: scale(1.02);
+    background: linear-gradient(to top,hsl(327, 57%, 41%),hsl(19, 100%, 54%));
+    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.90) !important;
+}
