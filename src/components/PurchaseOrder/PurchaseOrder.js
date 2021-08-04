@@ -36,14 +36,7 @@ const PurchaseOrder = () => {
             })
             setUsers(docs)
         })
-    }
-
-    useEffect(() => {
-        getUsers();
-    }, [])
-
-
-
+    };
 
 
     return (

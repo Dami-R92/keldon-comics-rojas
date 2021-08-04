@@ -29,7 +29,9 @@ export const CartProvider = ({ children }) => {
         alert('Muchas gracias por tu compra!')
     }
 
-    //Si esta en acrrito devuelve true si no esta devuelve False.
+        
+
+    //Si esta en carrito devuelve true si no esta devuelve False.
     let isInCart = id => cart.some(item => item.id === id)
 
 
@@ -60,6 +62,10 @@ export const CartProvider = ({ children }) => {
     const elementsInCart = cart.reduce((acc,{quantity})=> acc + quantity,0);
 
     
+
+
+
+
 
 
 

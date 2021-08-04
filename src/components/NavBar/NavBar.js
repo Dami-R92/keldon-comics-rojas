@@ -52,7 +52,6 @@ export default class NavBar extends Component {
                     active={activeItem === 'carrito'}
                     onClick={this.handleItemClick}>
                     <Link className='Link' to='/cart' > <CartWidget /> </Link>
-
                 </Menu.Item>
             </Menu>
         )
