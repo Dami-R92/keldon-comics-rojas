@@ -30,15 +30,12 @@ export default function ItemCount({ stock, addOn, id }) {
         <div className='contador'>
             {stock ? "":  <Label className='agotado' as='a' color='red' tag> Agotado </Label> }
             <Grid.Row columns={3} >
-
-                {stock > 0 ? <Button size='small' className='btn-count' color="blue" onClick={handleIncrement}> + </Button> : <Button className='btn-count' size='small' color="grey"> + </Button>}
-                <Label size='large' basic color="violet" key="olive" >{number}</Label>
-                {stock > 0 ? <Button size='small' className='btn-count' color="orange" onClick={handleDecrement}> - </Button> : <Button className='btn-count' size='small' color="grey"> - </Button>}
-
+                {stock > 0 ? <Button size='small' className='btn-handle' color="orange" onClick={handleDecrement}> - </Button> : <Button className='btn-handle' size='small' color="grey"> - </Button>}
+                <Label size='large' basic  >{number}</Label>
+                {stock > 0 ? <Button size='small' className='btn-handle' color="blue" onClick={handleIncrement}> + </Button> : <Button className='btn-handle' size='small' color="grey"> + </Button>}
             </Grid.Row>
             <br />
             {isInCart(id) === true ?
-                // Este primero boton tiene que ir al carrito
                 <Button className='btn-count' color="red" to='/cart' >
                     <Link to='/cart' > <Icon className='Link' name='shopping cart' /> Ir al Carrito</Link>
                 </Button> :

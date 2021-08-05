@@ -1,5 +1,7 @@
 
-h1 {
+.page-titles {
+    font-size: 5vh;
     color: white;
     margin: 20px;
+    font-family: 'Coming Soon', cursive;
 }

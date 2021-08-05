@@ -1,16 +1,12 @@
 .contador {
     margin: 10px;
 }
-
-.handle {
-    display: flex;
-    justify-content: space-between
-    /* align-items: center;
-    display: grid; */
-}
-
 .btn-count  {
     margin-left: 20px !important;
     margin-right: 20px !important;
     margin-top: 10px !important;
+}
+
+.btn-handle {
+    margin: 0px 25px !important;
 }

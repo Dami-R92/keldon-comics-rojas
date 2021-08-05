@@ -19,14 +19,14 @@ th {
     background-color: black;
     width: 33%;
     height: 45px;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 900;
     border-bottom: rgb(255, 172, 46) solid 10px;
 }
 td {
     width: 33%;
     height: 45px;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     border-bottom: white solid 1px;
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Form, TextArea } from 'semantic-ui-react'
+import { Button, Form } from 'semantic-ui-react'
 //CSS
 import './User.css';
 
@@ -40,14 +40,6 @@ const User = ({ addUsers }) => {
         setValues({ ...values, [name]: value });
     };
 
-    // const itemsPurchase = cart.map((item) => {
-    //     return [
-    //         item.name,
-    //         item.quantity,
-    //         item.amount,
-    //     ]
-    // })
-     console.log(totalCart);
 
     return (
         <div className='container'>
@@ -82,7 +74,7 @@ const User = ({ addUsers }) => {
                 </Form.Field>
                 <Form.Field>
                     <label>Email</label>
-                    <TextArea
+                    <input
                         placeholder='Email'
                         onChange={handleOnChange}
                         name='email'

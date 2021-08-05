@@ -21,5 +21,5 @@ export default function Item({ item }) {
 };
 Item.defaultProps = {
     cover: Img,
-    name: 'Keldon Comics'
+    name: 'Keldon Comics',
 }

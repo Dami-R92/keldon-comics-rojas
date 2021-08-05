@@ -5,7 +5,7 @@ import ItemListContainer from '../../components/ItemListContainer/ItemListContai
 function Home() {
 	return (
 		<div className='Home'>
-			<h1>El mundo del Comic y el Manga en tu bolsillo!</h1>
+			<h1 className='page-titles'>El mundo del Comic y el Manga en tu bolsillo!</h1>
 			<ItemListContainer />
 		</div>
 	);
