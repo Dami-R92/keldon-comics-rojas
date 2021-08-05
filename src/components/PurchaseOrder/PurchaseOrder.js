@@ -33,7 +33,7 @@ const PurchaseOrder = () => {
                 // console.log(doc.id);
                 docs.push({ ...doc.data(), id: doc.id })
                 // console.log(docs);
-            })
+            });
             setUsers(docs)
         })
     };
