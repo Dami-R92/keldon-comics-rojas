@@ -29,8 +29,8 @@ const PurchaseOrder = () => {
         usersCollection.onSnapshot((querySnapShot) => {
             const docs = [];
             querySnapShot.forEach((doc) => {
-                // console.log(doc.data());
-                // console.log(doc.id);
+                console.log(doc.data());
+                console.log(doc.id);
                 docs.push({ ...doc.data(), id: doc.id })
                 // console.log(docs);
             });
@@ -38,6 +38,9 @@ const PurchaseOrder = () => {
         })
     };
 
+    useEffect(() => {
+        getUsers()
+    }, []);
 
     return (
         <div>
