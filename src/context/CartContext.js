@@ -19,8 +19,13 @@ export const CartProvider = ({ children }) => {
     const confirmData = () => {
         setDatos(true)
     }
-    const confirmBuyer = () => {
-        setDatosUser(!datosUser)
+    const confirmBuyer = (values) => {
+        if (values.email ===values.emailRepeat) {
+            setDatosUser(!datosUser) 
+        }else {
+            console.log('Casi pero no, vos podes');
+        }
+        
     }
     
     const purchaseEnd = () => {

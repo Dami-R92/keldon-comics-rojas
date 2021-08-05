@@ -41,6 +41,7 @@ const User = ({ addUsers }) => {
     };
 
 
+
     return (
         <div className='container'>
             <Form onSubmit={handleSubmit}>
@@ -77,25 +78,20 @@ const User = ({ addUsers }) => {
                     <input
                         placeholder='Email'
                         onChange={handleOnChange}
-                        name='email'
+                        name='emailRepeat'
                         value={values.email}
                     />
                 </Form.Field>
-                {/* <input
-                    type='hidden'
-                    placeholder='Items'
-                    onChange={handleOnChange}
-                    name='items'
-                    value={itemsPurchase}>
-                </input> */}
-                {/* <input
-                    type='hidden'
-                    placeholder='totalCart'
-                    onChange={handleOnChange}
-                    name='totalCart'
-                    value={totalCart}>
-                </input> */}
-                <Button type='submit' primary fluid onClick={confirmBuyer}>Confirmar Datos de Usuario</Button>
+                <Form.Field>
+                    <label>Por favir repetinos tu Email</label>
+                    <input
+                        placeholder=' Repetinos tu Email'
+                        onChange={handleOnChange}
+                        name='emailRepeat'
+                        value={values.emailRepeat}
+                    />
+                </Form.Field>
+                <Button type='submit' primary fluid onClick={confirmBuyer(values)}>Confirmar Datos de Usuario</Button>
             </Form>
         </div>
     )
