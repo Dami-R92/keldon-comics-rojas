@@ -47,7 +47,7 @@ const User = ({ addUsers }) => {
     //         item.amount,
     //     ]
     // })
-    // console.log(cart);
+     console.log(totalCart);
 
     return (
         <div className='container'>
