@@ -14,10 +14,10 @@ const Cart = () => {
   const { cart, clearCart, removeItem, totalCart, datos, confirmData} = useCartContext();
 
   if (!cart.length) return (
-    <div>
+    <div className='empty-cart'>
       <h1>Vaya, no hay nada en tu carrito!! </h1>
       <h1>¿Por que no agregamos algunas cosas?</h1>
-      <Button className='btn' size='big' color='pink'> <Link className='Link' to='/' >Volver a la Tienda </Link></Button>
+      <Button className='btn' size='big' primary> <Link className='Link' to='/' >Volver a la Tienda </Link></Button>
 
     </div>
   )

@@ -10,6 +10,9 @@
 
 }
 
+.empty-cart {
+    color: white;
+}
 table {
     width: 100%;
     height: auto;
@@ -18,21 +21,23 @@ table {
 th {
     background-color: black;
     width: 33%;
-    height: 45px;
-    font-size: 18px;
+    height: 30px;
+    font-size: 16px;
     font-weight: 900;
     border-bottom: rgb(255, 172, 46) solid 10px;
 }
 td {
     width: 33%;
-    height: 45px;
-    font-size: 15px;
+    height: 25px;
+    font-size: 14px;
     text-align: center;
     border-bottom: white solid 1px;
 }
 .btn {
-    margin: 25px 50px 25px 50px !important;
-    
+    margin: 25px 50px 25px 50px !important; 
+}
+.btn a{
+    color: white;
 }
 
 .btn-remove {

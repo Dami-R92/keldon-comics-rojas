@@ -30,21 +30,23 @@ const User = ({ addUsers }) => {
     const [values, setValues] = useState(initialState);
 
     const handleSubmit = (e) => {
-        if (values.email ===values.emailRepeat && values!=='') {
-            // console.log('Ahora si perro');
+        if (values.email === values.emailRepeat && values.name !== '') {
             closeForm();
             e.preventDefault();
             addUsers(values)
+            console.log(values);
+            alert('Registre su numero de pedido para seguimiento :', values.id)
             setValues({ ...initialState })
-        }else {
-            console.log('asi no');
+            
+        } else {
+            alert('Debe ingresar todos los datos requeridos, muchas gracias!');
         }
-    };
+    }; 
 
     const handleOnChange = (e) => {
         const { name, value } = e.target;
         // console.log(name, value);
-        setValues({ ...values, [name]: value });
+        setValues({ ...values, [name]: value.toLowerCase() });
     };
 
 
@@ -59,8 +61,8 @@ const User = ({ addUsers }) => {
                         <input
                             placeholder='Nombre'
                             onChange={handleOnChange}
-                            name='surname'
-                            value={values.surname}
+                            name='name'
+                            value={values.name}
                         />
                     </Form.Field>
                     <Form.Field>
@@ -68,8 +70,8 @@ const User = ({ addUsers }) => {
                         <input
                             placeholder='Apellido'
                             onChange={handleOnChange}
-                            name='name'
-                            value={values.name}
+                            name='surname'
+                            value={values.surname}
                         />
                     </Form.Field>
                     <Form.Field>
@@ -100,7 +102,27 @@ const User = ({ addUsers }) => {
                             value={values.emailRepeat}
                         />
                     </Form.Field>
-                    <Button type='submit' primary fluid >Confirmar Datos de Usuario</Button>
+                    {cart.map((item) => (
+                        <div className='table-user'>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>{item.name} x {item.quantity}</td>
+                                        <td>$ {item.quantity * item.amount}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    ))}
+                    <table className='table-user'>
+                        <tbody>
+                            <tr>
+                                <td>Total: </td>
+                                <td>$ {totalCart}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <Button type='submit' primary fluid >Finalizar Compra</Button>
                 </Form>
             </div>
         </div>
