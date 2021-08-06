@@ -3,7 +3,7 @@
     height: 100%;
     padding: 30px;
     backdrop-filter: blur(2px);
-    background:  rgba(240, 255, 240, 0.384) ;
+    background: rgba(240, 255, 240, 0.384);
     display: flex;
     justify-content: center;
     position: fixed;
@@ -16,10 +16,10 @@
 
 
 
-.form {
+.form-container {
     width: 80%;
     padding: 30px;
-    background: linear-gradient(to top,hsl(166, 72%, 50%),hsl(200, 72%, 60%));
+    background: linear-gradient(to top, hsl(166, 72%, 50%), hsl(200, 72%, 60%));
     border-radius: 10px;
     margin: 10px;
     box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
@@ -29,4 +29,19 @@ label {
     color: white !important;
     text-align: start;
     font-weight: 400 !important;
+}
+
+.btn-close {
+    color: white;
+    font-size: 20px;
+    background: linear-gradient(to bottom, hsl(166, 72%, 60%), hsl(200, 72%, 70%));
+    border: none;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 2px 20px 2px 20px;
+}
+
+.btn-close:hover {
+    background-color: rgba(0, 128, 128, 0.281);
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.50) !important;
 }

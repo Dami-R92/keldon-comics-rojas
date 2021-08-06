@@ -14,19 +14,18 @@ export const CartProvider = ({ children }) => {
 
     const [datos,setDatos] = useState("")
 
-    const [datosUser,setDatosUser] = useState("")
+    const [datosUser,setDatosUser] = useState(false)
 
     const confirmData = () => {
         setDatos(true)
     }
-    const confirmBuyer = (values) => {
-        if (values.email ===values.emailRepeat) {
-            setDatosUser(!datosUser) 
-        }else {
-            console.log('Casi pero no, vos podes');
-        }
-        
+    const closeForm = () => {
+        setDatos(false)
     }
+    const confirmBuyer = () => {
+            setDatosUser(true);
+        }  
+    
     
     const purchaseEnd = () => {
         setCart([]);
@@ -74,7 +73,7 @@ export const CartProvider = ({ children }) => {
 
 
 
-    return <CartContext.Provider value={{ cart, setCart, clearCart, addToCart, isInCart, purchaseEnd, realStock, removeItem, totalCart, elementsInCart, datos, confirmData, confirmBuyer, datosUser}}>
+    return <CartContext.Provider value={{ cart, setCart, clearCart, addToCart, isInCart, purchaseEnd, realStock, removeItem, totalCart, elementsInCart, datos, confirmData, datosUser, closeForm,confirmBuyer}}>
         {children}
     </CartContext.Provider>
 

@@ -23,14 +23,12 @@ const PurchaseOrder = () => {
         await usersCollection.doc().set(user)
         console.log('Usuario agregado!');
     }
-
-
     const getUsers = () => {
         usersCollection.onSnapshot((querySnapShot) => {
             const docs = [];
             querySnapShot.forEach((doc) => {
-                console.log(doc.data());
-                console.log(doc.id);
+                // console.log(doc.data());
+                // console.log(doc.id);
                 docs.push({ ...doc.data(), id: doc.id })
                 // console.log(docs);
             });
@@ -57,8 +55,8 @@ const PurchaseOrder = () => {
                 </div>
             ))}
             <h2>Detalle de la Compra</h2>
-            {cart.map((item) => (
-                <div className='cart-container'>
+            {/* {cart.map((item) => (
+                <div className='cart-container' key={item.id}>
                     <table>
                         <tbody>
                             <tr>
@@ -69,7 +67,7 @@ const PurchaseOrder = () => {
                         </tbody>
                     </table>
                 </div>
-            ))}
+            ))} */}
             <Button className='btn' onClick={purchaseEnd} size='big' color='green'>Finalizar Compra</Button>
             </div>
             : ""}
