@@ -41,6 +41,13 @@ export default class NavBar extends Component {
                     <Link className='Link' to='/category/comic'> Comic </Link>
                 </Menu.Item>
                 <Menu.Item
+                    name='order'
+                    active={activeItem === 'order'}
+                    onClick={this.handleItemClick}
+                >
+                    <Link className='Link' to='/order'> Mis Pedidos </Link>
+                </Menu.Item>
+                <Menu.Item
                     name='carrito'
                     active={activeItem === 'carrito'}
                     onClick={this.handleItemClick}>

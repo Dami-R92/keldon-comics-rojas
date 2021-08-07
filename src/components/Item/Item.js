@@ -1,11 +1,10 @@
 import React from 'react'
 import { Card, Label } from 'semantic-ui-react'
-import './Item.css'
-
-import imagen from './defaultimg.png';
+import './Item.css';
 
 
-export default function Item({ item, src = imagen }) {
+
+export default function Item({ item }) {
 
     return (
         <Card className='card'>
@@ -19,8 +18,3 @@ export default function Item({ item, src = imagen }) {
         </Card>
     );
 };
-
-Item.defaultProps = {
-    src: imagen,
-    name: 'Keldon Comics',
-}

@@ -13,8 +13,6 @@ function ItemDetailContainer() {
 
 	const [comics, setComics] = useState([]);
 
-
-
 	useEffect(() => {
 		(async () => {
 			const response = await itemsCollection.doc(id).get();

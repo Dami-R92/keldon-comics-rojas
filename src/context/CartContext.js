@@ -1,9 +1,8 @@
 import { createContext, useState, useContext } from 'react';
+import { usersCollection } from '../../src/firebase';
 
 export const CartContext = createContext({});
-
 export const useCartContext = () => useContext(CartContext)
-
 
 
 export const CartProvider = ({ children }) => {
@@ -12,7 +11,7 @@ export const CartProvider = ({ children }) => {
 
     const clearCart = () => setCart([]);
 
-    const [datos,setDatos] = useState("")
+    const [datos,setDatos] = useState(false)
 
     const [datosUser,setDatosUser] = useState(false)
 
@@ -26,16 +25,12 @@ export const CartProvider = ({ children }) => {
             setDatosUser(true);
         }  
     
-    
     const purchaseEnd = () => {
         setCart([]);
-        setDatos(false)
-        alert('Muchas gracias por tu compra!')
+        alert('Muchas gracias por su compra! En Instantes recibira una alerta con su codigo de Seguimiento')
     }
-
         
-
-    //Si esta en carrito devuelve true si no esta devuelve False.
+//Funcionamiento del Carrito.
     let isInCart = id => cart.some(item => item.id === id)
 
 
@@ -51,7 +46,6 @@ export const CartProvider = ({ children }) => {
         } else {
             setCart(prev => [...prev, { ...item, quantity }])
         }
-
     };
 
     const removeItem = (id) => setCart(cart.filter(item=> item.id !== id))
@@ -65,15 +59,18 @@ export const CartProvider = ({ children }) => {
 
     const elementsInCart = cart.reduce((acc,{quantity})=> acc + quantity,0);
 
-    
+    //ADMINISTRACION DE USUARIOS Y PEDIDOS.
+
+    const addUsers = async (user) => {
+        let newUser = await usersCollection.doc()
+        newUser.set(user);
+        setTimeout(() => {
+            alert ('Registre su numero de pedido para seguimiento :  '+ newUser.id)
+          }, 5000);
+    };
 
 
-
-
-
-
-
-    return <CartContext.Provider value={{ cart, setCart, clearCart, addToCart, isInCart, purchaseEnd, realStock, removeItem, totalCart, elementsInCart, datos, confirmData, datosUser, closeForm,confirmBuyer}}>
+    return <CartContext.Provider value={{ cart, setCart, clearCart, addToCart, isInCart, purchaseEnd, realStock, removeItem, totalCart, elementsInCart, datos, confirmData, datosUser, closeForm,confirmBuyer, addUsers }}>
         {children}
     </CartContext.Provider>
 

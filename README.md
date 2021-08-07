@@ -1,3 +1,26 @@
+Keldon Comics App
+
+Esta aplicacion tiene opr objetivo funcionar como una ecommerse para la todo aquello relacionado al mundo del manga y el comic. 
+
+Demo: 
+
+Para clonar este proyecto primero dirígete hacia el logo de Code. 
+
+Luego presiona en copiar la dirección de enlace.
+
+Luego ejecuta en la consola git clone.
+
+## git clone "AQUI PEGO EL LINK DEL REPOSITORIO SIN COMILLAS"
+
+Para poder ejecutarlo ejecuta en la consola:
+
+## npm install
+
+y para ejecutarlo ejecuta luego:
+
+## npm run start
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

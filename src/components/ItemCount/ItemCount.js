@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, Label, Icon, Grid } from 'semantic-ui-react'
 import { useCartContext } from '../../context/CartContext.js';
 import { Link } from 'react-router-dom';
+
 //CSS
 import './ItemCount.css'
 
@@ -26,9 +27,8 @@ export default function ItemCount({ stock, addOn, id }) {
 
 
     return (
-
         <div className='contador'>
-            {stock ? "":  <Label className='agotado' as='a' color='red' tag> Agotado </Label> }
+            {stock ? "" : <Label className='agotado' as='a' color='red' tag> Agotado </Label>}
             <Grid.Row columns={3} >
                 {stock > 0 ? <Button size='small' className='btn-handle' color="orange" onClick={handleDecrement}> - </Button> : <Button className='btn-handle' size='small' color="grey"> - </Button>}
                 <Label size='large' basic  >{number}</Label>

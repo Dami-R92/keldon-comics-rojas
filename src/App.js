@@ -11,6 +11,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import { CartProvider } from './context/CartContext';
 import Cart from './components/Cart/Cart.js';
 import Error404 from './views/404/Error404';
+import Order from './views/Order/Order';
 
 
 
@@ -25,6 +26,7 @@ function App() {
             <Route path='/detail/:id' exact component={ItemDetailContainer}></Route>
             <Route path='/category/:categoryName' exact component={ItemListContainer}></Route>
             <Route path='/cart' component = {Cart}></Route>
+            <Route path='/order' component = {Order}></Route>
             <Route path='/*' component = {Error404}></Route>
           </Switch>
         </div>

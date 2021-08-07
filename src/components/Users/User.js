@@ -6,10 +6,8 @@ import './User.css';
 //CONTEXT
 import { useCartContext } from '../../context/CartContext';
 
-
-
 const User = ({ addUsers }) => {
-    const { cart, totalCart, confirmBuyer, closeForm } = useCartContext();
+    const { cart, totalCart, purchaseEnd, closeForm } = useCartContext();
 
     const initialState = {
         name: '',
@@ -30,13 +28,12 @@ const User = ({ addUsers }) => {
     const [values, setValues] = useState(initialState);
 
     const handleSubmit = (e) => {
-        if (values.email === values.emailRepeat && values.name !== '') {
+        if (values.email === values.emailRepeat && values.name, values.email, values.surname, values.cel !== '') {
             closeForm();
             e.preventDefault();
-            addUsers(values)
-            console.log(values);
-            alert('Registre su numero de pedido para seguimiento :', values.id)
+            addUsers(values);
             setValues({ ...initialState })
+            purchaseEnd();
             
         } else {
             alert('Debe ingresar todos los datos requeridos, muchas gracias!');
@@ -45,11 +42,8 @@ const User = ({ addUsers }) => {
 
     const handleOnChange = (e) => {
         const { name, value } = e.target;
-        // console.log(name, value);
-        setValues({ ...values, [name]: value.toLowerCase() });
+        setValues({ ...values, [name]: value });
     };
-
-
 
     return (
         <div className='container'>

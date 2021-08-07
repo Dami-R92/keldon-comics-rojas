@@ -44,6 +44,3 @@ label {
     background-color: rgba(0, 128, 128, 0.281);
     box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.50) !important;
 }
-.table-user >th >td {
-    font-size: 10px !important; 
-}

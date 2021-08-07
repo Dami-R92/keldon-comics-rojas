@@ -7,11 +7,11 @@ import { useCartContext } from '../../context/CartContext';
 //CSS
 import './Cart.css'
 //Componentes
-import PurchaseOrder from '../PurchaseOrder/PurchaseOrder';
+import User from '../Users/User';
 
 const Cart = () => {
 
-  const { cart, clearCart, removeItem, totalCart, datos, confirmData} = useCartContext();
+  const { cart, clearCart, removeItem, totalCart, datos, confirmData, addUsers} = useCartContext();
 
   if (!cart.length) return (
     <div className='empty-cart'>
@@ -58,7 +58,7 @@ const Cart = () => {
           </tr>
         </tbody>
       </table>
-      {datos? <PurchaseOrder /> :
+      {datos? <User addUsers={addUsers} /> :
         <div>
           <Button className='btn' onClick={clearCart} size='big' color='blue' >Vaciar Carrito</Button>
           <Button className='btn' onClick={confirmData} size='big' color='green'>Confirmar Datos</Button>

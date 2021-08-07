@@ -13,13 +13,10 @@
 .empty-cart {
     color: white;
 }
-table {
-    width: 100%;
-    height: auto;
-    
-}
+
 th {
     background-color: black;
+    color: white;
     width: 33%;
     height: 30px;
     font-size: 16px;
@@ -27,6 +24,8 @@ th {
     border-bottom: rgb(255, 172, 46) solid 10px;
 }
 td {
+    color: white;
+    font-weight: 700;
     width: 33%;
     height: 25px;
     font-size: 14px;

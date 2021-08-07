@@ -1,0 +1,37 @@
+table {
+    width: 100%;
+    height: auto;
+    
+};
+.th-order {
+    background-color: black;
+    color: whitesmoke;
+    width: 33%;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 900;
+    border-bottom: rgb(255, 172, 46) solid 10px;
+};
+td {
+    width: 33%;
+    height: 25px;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: white solid 1px;
+};
+
+.order-container  {
+    color: white;
+    padding: 10px;
+
+}
+
+.order-title {
+    color: white;
+    padding: 10px;
+}
+.order-text {
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
